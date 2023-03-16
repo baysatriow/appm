@@ -1,95 +1,106 @@
 <?php
-if (isset($_GET['pesan'])) {
-    $pesan = $_GET['pesan'];
-
-    if ($pesan == "sukses") {
-        echo '<div class="alert alert-success">Data Pengaduan Berhasil Ditambahkan</div>';
-    } else if ($pesan == "gagal") {
-        echo '<div class="alert alert-danger">Data Gagal Ditambahkan</div>';
-    } else if ($pesan == "error") {
-        echo '<div class="alert alert-danger">Terjadi kesalahan saat mengupload file</div>';
-    } else if ($pesan == "ukuran") {
-        echo '<div class="alert alert-danger">Ekstensi file tidak diizinkan atau ukuran file terlalu besar, maksimal ukuran file adalah 2Mb</div>';
-    }
-}
 	// Membuat query dan Menjalankan query 
 	$query = mysqli_query($koneksi, "SELECT * FROM masyarakat WHERE id_masyarakat='$id'");
 	// Mendapatkan hasil query
 	$setting = mysqli_fetch_assoc($query);
 ?>
 
-	<!-- Page Heading -->
-	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<h1 class="h3 mb-0 text-gray-800">User Setting</h1>
-	</div>
-	<nav aria-label="breadcrumb">
-		<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="."><i class="fas fa-home"></i></a></li>
-		<li class="breadcrumb-item active" aria-current="page">Setting</li>
-		</ol>
-	</nav>
+<?php
+    if (isset($_GET['pesan'])) {
+        $pesan = $_GET['pesan'];
 
-	<div class="row">
-		<div class="col-md-12">
+        if ($pesan == "sukses") {
+            echo "<script type='text/javascript'>
+
+                iziToast.info({
+                title: 'Selamat!',
+                message: 'Data Berhasil Di Tambahkan',
+                position: 'topRight'
+                });							
+                </script>";
+        } else if ($pesan == "gagal") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Data Gagal Di Tambahkan,
+              position: 'topRight'
+              });
+              </script>";
+        }else if ($pesan == "error") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Terjadi kesalahan saat mengupload file',
+              position: 'topRight'
+              });
+              </script>";
+        }else if ($pesan == "ukuran") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Ekstensi file tidak diizinkan atau ukuran file terlalu besar, maksimal ukuran file adalah 2Mb',
+              position: 'topRight'
+              });
+              </script>";
+        }
+    }
+    ?>
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <h4 class="page-title">Pengaturan Pengguna</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+	<div class="card">
+		<div class="card-body">
 		<form method="POST" action="modul/mod_setting/crud_setting.php?pg=edit">
-			<div class="card" id="settings-card">
-				<div class="card-header">
-					Halaman ini memuat semua pengaturan aplikasi
-				</div>
-				<div class="card-body">
-					<input name="id_masyarakat" type="hidden" value="<?= $setting['id_masyarakat'] ?>">
-					<div class="form-group row align-items-center">
-		                <label for="site-title" class="form-control-label col-sm-3 text-md-right">Nama Lengkap</label>
-		                <div class="col-sm-6 col-md-9">
-		                    <input type="text" name="nama" class="form-control" value="<?= $setting['nama'] ?>" required>
-		                </div>
-		            </div>
-		            <div class="form-group row align-items-center">
-		                <label for="site-title" class="form-control-label col-sm-3 text-md-right">Username</label>
-		                <div class="col-sm-6 col-md-9">
-		                    <input type="text" name="username" class="form-control" value="<?= $setting['username'] ?>" required>
-		                </div>
-		            </div>
-		            <div class="form-group row align-items-center">
-		                <label for="site-title" class="form-control-label col-sm-3 text-md-right">Password</label>
-		                <div class="col-sm-6 col-md-9">
+				<input type="hidden" name="id_masyarakat" class="form-control" value="<?= $setting['id_masyarakat'] ?>" required>
+				<h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle me-1"></i> Data Diri</h5>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label for="firstname" class="form-label">Nama Lengkap</label>
+							<input type="text" name="nama" class="form-control" value="<?= $setting['nama'] ?>" required>
+						</div>
+					</div>
+				</div> <!-- end row -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label for="useremail" class="form-label">Username</label>
+							<input type="text" name="username" class="form-control" value="<?= $setting['username'] ?>" required>
+						</div>
+					</div>
+				</div> <!-- end row -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label for="userpassword" class="form-label">Password</label>
 		                    <input type="password" name="password" class="form-control">
 							<small class="form-text text-muted">Kosongkan jika tidak ingin merubah password.</small>
-		                </div>
-		            </div>
-		            <div class="form-group row align-items-center">
-		                <label for="site-title" class="form-control-label col-sm-3 text-md-right">No Telepon</label>
-		                <div class="col-sm-6 col-md-9">
-		                    <input type="text" name="telp" class="form-control" value="<?= $setting['telp'] ?>" required>
-		                </div>
-		            </div>
-					
-		            <!-- <div class="form-group row align-items-center">
-		                <label class="form-control-label col-sm-3 text-md-right">Foto Profile</label>
-		                <div class="col-sm-6 col-md-9">
-		                    <div class="custom-file">
-		                        <input type="file" name="logo" class="custom-file-input" id="site-logo">
-		                        <label class="custom-file-label">Choose File</label>
-		                    </div>
-		                    <div class="form-text text-muted">The image must have a maximum size of 1MB</div>
-		                </div>
+						</div>
+					</div> <!-- end col -->
+				</div> <!-- end row -->
 
-		            </div>
-		            <div class="form-group row align-items-center">
-		                <label class="form-control-label col-sm-3 text-md-right">Preview</label>
-		                <div class="col-sm-6 col-md-6">
-		                    <img src="../<?= $setting['photo'] ?>" class="img-thumbnail" width="100">
-		                </div>
-		            </div> -->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label for="userpassword" class="form-label">No Telepon</label>
+		                    <input type="text" name="telp" class="form-control" value="<?= $setting['telp'] ?>" required>
+						</div>
+					</div> <!-- end col -->
+				</div> <!-- end row -->
+				<div class="text-end">
+					<button type="submit" class="btn btn-success mt-2"><i class="mdi mdi-content-save"></i> Save</button>
 				</div>
-				<div class="card-footer text-md-right">
-					<button type="submit" class="btn btn-dark" id="save-btn">Save Changes</button>
-            		<button class="btn btn-danger" type="button">Reset</button>
-				</div>
-			</div>
 			</form>
 		</div>
 	</div>
+</div>
 
 <!-- Page Script -->
 <script>

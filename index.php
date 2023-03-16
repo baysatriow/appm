@@ -9,10 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="migrasi/assets/images/favicon.ico">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -36,8 +34,10 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="."><h1 class="brand fw-bold">LAPOR YUK!</h1></a></h1>
+      <div class="logo">
+        <img src="logo.png" alt="" height="50">
+      </div>
+      <!-- <h1 class="logo"><a href="."><h1 class="brand fw-bold">LAPOR YUK!</h1></a></h1> -->
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -63,9 +63,6 @@
                 message: 'Registrasi Berhasil',
                 position: 'topRight'
                 });							
-                setTimeout(function() {
-                window.location.href = 'index.php';
-                }, 2000);
                 </script>";
         } else if ($pesan == "gagal-login") {
             echo "<script type='text/javascript'>iziToast.warning({
@@ -73,9 +70,6 @@
                 message: 'Login Gagal, Silahkan Coba Lagi!',
                 position: 'topRight'
                 });
-                setTimeout(function() {
-                window.location.href = 'index.php';
-                }, 2000);
                 </script>";
         } else if ($pesan == "login-dulu") {
             echo "<script type='text/javascript'>iziToast.warning({
@@ -83,9 +77,6 @@
                 message: 'Anda Belum Login, Silahkan Login Terlebih Dahulu!',
                 position: 'topRight'
                 });
-                setTimeout(function() {
-                window.location.href = 'index.php';
-                }, 2000);
                 </script>";
         } else if ($pesan == "logout") {
             echo "<script type='text/javascript'>iziToast.info({
@@ -93,9 +84,6 @@
                 message: 'Anda Berhasil Logout',
                 position: 'topRight'
                 });
-                setTimeout(function() {
-                window.location.href = 'index.php';
-                }, 2000);
                 </script>";
         } else if ($pesan == "ukuran") {
             echo '<div class="alert alert-danger">Ekstensi file tidak diizinkan atau ukuran file terlalu besar, maksimal ukuran file adalah 2Mb</div>';

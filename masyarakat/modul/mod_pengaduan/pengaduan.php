@@ -1,29 +1,65 @@
 <?php
-if (isset($_GET['pesan'])) {
-    $pesan = $_GET['pesan'];
+    if (isset($_GET['pesan'])) {
+        $pesan = $_GET['pesan'];
 
-    if ($pesan == "sukses") {
-        echo '<div class="alert alert-success">Data Pengaduan Berhasil Ditambahkan</div>';
-    } else if ($pesan == "gagal") {
-        echo '<div class="alert alert-danger">Data Gagal Ditambahkan</div>';
-    } else if ($pesan == "error") {
-        echo '<div class="alert alert-danger">Terjadi kesalahan saat mengupload file</div>';
-    } else if ($pesan == "ukuran") {
-        echo '<div class="alert alert-danger">Ekstensi file tidak diizinkan atau ukuran file terlalu besar, maksimal ukuran file adalah 2Mb</div>';
+        if ($pesan == "sukses") {
+            echo "<script type='text/javascript'>
+
+                iziToast.info({
+                title: 'Selamat!',
+                message: 'Data Berhasil Di Tambahkan',
+                position: 'topRight'
+                });							
+                </script>";
+        } else if ($pesan == "gagal") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Data Gagal Di Tambahkan,
+              position: 'topRight'
+              });
+              </script>";
+        }else if ($pesan == "error") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Terjadi kesalahan saat mengupload file',
+              position: 'topRight'
+              });
+              </script>";
+        }else if ($pesan == "ukuran") {
+            echo "<script type='text/javascript'>iziToast.warning({
+              title: 'Maaf!',
+              message: 'Ekstensi file tidak diizinkan atau ukuran file terlalu besar, maksimal ukuran file adalah 2Mb',
+              position: 'topRight'
+              });
+              </script>";
+        }
     }
-}
-?>
-
-	<!-- Page Heading -->
-	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<h1 class="h3 mb-0 text-gray-800">Pengaduan</h1>
-	</div>
-	<nav aria-label="breadcrumb">
-		<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="."><i class="fas fa-home"></i></a></li>
-		<li class="breadcrumb-item active" aria-current="page">Pengaduan</li>
-		</ol>
-	</nav>
+    ?>
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <!-- <div class="page-title-right">
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-light" id="dash-daterange">
+                        <span class="input-group-text bg-primary border-primary text-white">
+                            <i class="mdi mdi-calendar-range font-13"></i>
+                        </span>
+                    </div>
+                    <a href="javascript: void(0);" class="btn btn-primary ms-2">
+                        <i class="mdi mdi-autorenew"></i>
+                    </a>
+                    <a href="javascript: void(0);" class="btn btn-primary ms-1">
+                        <i class="mdi mdi-filter-variant"></i>
+                    </a>
+                </form>
+            </div> -->
+            <h4 class="page-title">Tulis Pengaduan</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
 
 <div class="card">
   <h5 class="card-header">Tulis Pengaduan</h5>
@@ -50,14 +86,11 @@ if (isset($_GET['pesan'])) {
 		  <textarea name="isi_laporan" class="form-control" id="isi_laporan" rows="3"></textarea>
 		</div>
 		<div class="mb-3">
-			<label for="foto" class="form-label">Foto</label>
-			<div class="custom-file">
-				<input name="foto" type="file" class="custom-file-input" id="customFile">
-				<label class="custom-file-label" for="customFile">Pilih Foto</label>
-			</div>
+		  <label for="foto" class="form-label">Foto</label>
+		  <input name="foto" class="form-control" type="file" id="foto">
 		</div>
 		<div class="mb-3">
-			<button type="submit" class="btn btn-primary">Kirim</button>
+			<button type="submit" class="btn btn-primary">KIRIM</button>
 		</div>
     </form>
   </div>

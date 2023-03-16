@@ -13,7 +13,6 @@ if($pg == "edit") {
     $password = $_POST['password'];
     $telp = $_POST['telp'];
     $level = $_POST['level'];
-
     // cek apakah password baru diinputkan atau tidak
     if(empty($password)) {
         // jika password kosong, gunakan password lama

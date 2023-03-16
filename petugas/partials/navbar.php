@@ -1,47 +1,66 @@
-<nav class="navbar navbar-expand navbar-light bg-light topbar mb-4 static-top shadow">
 
-<!-- Sidebar Toggle-->
-<!-- <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 d-none d-md-inline-block" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button> -->
+<div class="navbar-custom">
+    <ul class="list-unstyled topbar-menu float-end mb-0">
 
-<!-- Navbar Brand -->
-<!-- <a class="navbar-brand mb-0 h1" href=".">APLIKASI PENGADUAN PELAPORAN petugas</a> -->
-
-<!-- Sidebar Toggle (Topbar) -->
-<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-    <i class="fa fa-bars"></i>
-</button>
-
-<!-- Topbar Navbar -->
-<ul class="navbar-nav ml-auto">
-    <div class="topbar-divider d-none d-sm-block"></div>
-
-    <!-- Nav Item - User Information -->
-    <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$petugas['nama_petugas']?></span>
-            <img class="img-profile rounded-circle"
-                src="img/undraw_profile.svg">
-        </a>
-        <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-            aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="?pg=setting">
-                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                Settings
+        <li class="notification-list">
+            <a class="nav-link end-bar-toggle" href="javascript: void(0);">
+                <i class="dripicons-gear noti-icon"></i>
             </a>
-            <a class="dropdown-item" href="#">
-                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                Logout
-            </a>
-        </div>
-    </li>
+        </li>
 
-</ul>
+        <li class="dropdown notification-list d-lg-none">
+            <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <i class="dripicons-search noti-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
+                <form class="p-3">
+                    <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                </form>
+            </div>
+        </li>
 
-</nav>
+        <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <span class="account-user-avatar"> 
+                    <img src="../migrasi/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                </span>
+                <span>
+                    <span class="account-user-name"><?=$petugas['nama_petugas']?></span>
+                    <span class="account-position"><?=$petugas['level']?></span>
+                </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                <!-- item-->
+                <div class=" dropdown-header noti-title">
+                    <h6 class="text-overflow m-0">Welcome !</h6>
+                </div>
+
+                <!-- item-->
+                <a href="?pg=setting" class="dropdown-item notify-item">
+                    <i class="mdi mdi-account-edit me-1"></i>
+                    <span> User Setting </span>
+                </a>
+
+                <!-- item-->
+                <a href="logout.php" class="dropdown-item notify-item" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <i class="mdi mdi-logout me-1"></i>
+                    <span> Logoout </span>
+                </a>
+
+            </div>
+        </li>
+
+    </ul>
+    <button class="button-menu-mobile open-left">
+        <i class="mdi mdi-menu"></i>
+    </button>
+    <div class="app-search dropdown d-none d-lg-block">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
+                <span class="mdi mdi-magnify search-icon"></span>
+                <button class="input-group-text btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>

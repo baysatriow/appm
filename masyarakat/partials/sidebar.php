@@ -1,81 +1,45 @@
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="side-nav">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href=".">
-                <div class="sidebar-brand-text mx-3">APPM</div>
-            </a>
+<li class="side-nav-title side-nav-item">Navigation</li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+<li class="side-nav-item">
+    <a href="." class="side-nav-link">
+         <i class="uil-home-alt"></i>
+        <span> Dashboard</span>
+    </a>
+</li> 
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href=".">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+<li class="side-nav-title side-nav-item">Menu Utama</li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+<li class="side-nav-item">
+    <a href="?pg=pengaduan" class="side-nav-link">
+        <i class="uil-calender"></i>
+        <span> Tulis Pengaduan</span>
+    </a>
+</li>
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Menu Utama
-            </div>
+<li class="side-nav-item">
+    <a href="?pg=tanggapan" class="side-nav-link">
+        <i class="uil-comments-alt"></i>
+        <span> Lihat Tanggapan </span>
+    </a>
+</li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="?pg=pengaduan">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Tulis Pengaduan</span></a>
-            </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="?pg=tanggapan">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tanggapan</span></a>
-            </li>
+<li class="side-nav-title side-nav-item">User</li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Khusus Admin!!! -->
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-                Print
-            </div> -->
-
-            <!-- Nav Item - Tables -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="laporan.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Laporan Pengaduan</span></a>
-            </li> -->
-            
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Lainnya
-            </div>
-            <li class="nav-item">
-            <a class="nav-link" href="logout.php" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                Logout
-            </a>
-
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-            <div class="small">Anda login sebagai :</div>
-                <?= $masyarakat['nama']; ?>
-            </div>
-
-        </ul>
+<li class="side-nav-item">
+    <a href="?pg=setting" class="side-nav-link">
+        <i class="uil-globe"></i>
+        <span class="badge bg-secondary text-light float-end">New</span>
+        <span> User Setting </span>
+    </a>
+</li>
+                        
+<li class="side-nav-item">
+    <a href="logout.php" class="side-nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal">
+        <i class="mdi mdi-logout me-1"></i>
+        <span> Logoout </span>
+    </a>
+</li>
+</ul>
