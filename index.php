@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- App favicon -->
-  <link rel="shortcut icon" href="migrasi/assets/images/favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 

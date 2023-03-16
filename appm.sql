@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Mar 2023 pada 09.19
+-- Waktu pembuatan: 16 Mar 2023 pada 07.44
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -42,9 +42,10 @@ CREATE TABLE `masyarakat` (
 
 INSERT INTO `masyarakat` (`id_masyarakat`, `nik`, `nama`, `username`, `password`, `telp`) VALUES
 (4, '1234', 'Admin', 'admin', '$2y$10$O9uEiWMxswII2dLIyJwM7.rQSpLDKNKECGjxr9mcJ5c9JBmWfLcHO', '1234'),
-(5, '123123123', 'Bayu Satrio Wibowo', '2481', '$2y$10$O9uEiWMxswII2dLIyJwM7.rQSpLDKNKECGjxr9mcJ5c9JBmWfLcHO', '1213'),
+(5, '123123123', 'Bayu Satrio Wibowos', '2481', '$2y$10$O9uEiWMxswII2dLIyJwM7.rQSpLDKNKECGjxr9mcJ5c9JBmWfLcHO', '1213'),
 (6, '11248124312312', 'Bayu Sudrajat', 'Bayu2481', '$2y$10$O9uEiWMxswII2dLIyJwM7.rQSpLDKNKECGjxr9mcJ5c9JBmWfLcHO', '081377754080'),
-(7, '1231243', 'Asdasdd', '1234', '$2y$10$I.eqXe1CqRhEiMG4x/OWDeogAOC8mltKROStzu5McrE8PWgKQpBgK', '1234');
+(7, '1231243', 'Asdasdd', '1234', '$2y$10$I.eqXe1CqRhEiMG4x/OWDeogAOC8mltKROStzu5McrE8PWgKQpBgK', '1234'),
+(10, '', 'Abdillah', 'abdil', '$2y$10$3y2jlm3l365oB5DDq2BlwOR2VzDx/FGk/OO5s6ZDDOvGhoohdNpoy', '0821777574323');
 
 -- --------------------------------------------------------
 
@@ -69,7 +70,10 @@ INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `isi_laporan`, 
 (1, '2023-03-15', '123123123', 'aasadsadasdasd', '20230315_1.jpg', '2'),
 (2, '2023-03-15', '123123123', 'Halo Ngetes Pengaduan\r\n', '20230315_2.jpg', '2'),
 (3, '2023-03-15', '123123123', 'Halo saday ingisn amdlsldlasdlasjkldjsaldjlasdjlasjdlasdsa', '20230315_3.jpg', '1'),
-(4, '2023-03-15', '11248124312312', 'adsdasdasdas', '20230315_4.jpg', '2');
+(4, '2023-03-15', '11248124312312', 'adsdasdasdas', '20230315_4.jpg', '2'),
+(5, '2023-03-16', '123123123', 'Testing 2481', '20230316_5.jpg', '2'),
+(6, '2023-03-16', '123123123', 'sdasdsaasdsadsdasds', '20230316_6.jpg', '1'),
+(7, '2023-03-16', '123123123', 'baru', '20230316_7.jpg', '0');
 
 -- --------------------------------------------------------
 
@@ -91,9 +95,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`, `telp`, `level`) VALUES
-(1, 'Admin', 'admin', '$2y$10$O9uEiWMxswII2dLIyJwM7.rQSpLDKNKECGjxr9mcJ5c9JBmWfLcHO', '217281728', 'admin'),
-(9, 'Fadil Ubaidilah', 'fadil', '$2y$10$jr8.OXtcN9bKihkwfDlfA.Jtl0Wc7KEBuvS9dSNbzVRsR8MhT9Hv6', '08132222', 'admin'),
-(10, 'Bayu Satrio Wibowo', 'baystriow', '$2y$10$N71nsaLnN8bfbgjK6vSNuuQa1e8QGnYZd7DB1BHHfBhVcRMPMdCI6', '12345', 'admin');
+(1, 'Admins', 'admin', '$2y$10$U8qWMAY9EZmR9xoyUDNOJu.xkIhuhDzI2eoJ/lB2rLmZIPqviN1CK', '123', 'admin'),
+(10, 'Bayu Satrio Wibowos', 'baystriow', '$2y$10$N71nsaLnN8bfbgjK6vSNuuQa1e8QGnYZd7DB1BHHfBhVcRMPMdCI6', '12345', 'admin');
 
 -- --------------------------------------------------------
 
@@ -115,8 +118,10 @@ CREATE TABLE `tanggapan` (
 
 INSERT INTO `tanggapan` (`id_tanggapan`, `id_pengaduan`, `tgl_tanggapan`, `tanggapan`, `id_petugas`) VALUES
 (1, 1, '2023-03-15', 'asdasdasd', 1),
-(4, 2, '2023-03-15', 'Halo Saya adalah Petugas ASKDkasdasdjaskdasjdkskdsdjskdksjdkskjdjskdjsadjas\r\n', 1),
-(5, 4, '2023-03-15', 'Haloooooooo\r\n', 1);
+(5, 4, '2023-03-15', 'Haloooooooo\r\n', 1),
+(6, 5, '2023-03-16', 'tanggapan anda kami tangai', 1),
+(7, 5, '2023-03-16', 'saya coba lagi', 1),
+(8, 5, '2023-03-16', 'halo selamat malam', 1);
 
 --
 -- Indexes for dumped tables
@@ -154,25 +159,25 @@ ALTER TABLE `tanggapan`
 -- AUTO_INCREMENT untuk tabel `masyarakat`
 --
 ALTER TABLE `masyarakat`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tanggapan`
 --
 ALTER TABLE `tanggapan`
-  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

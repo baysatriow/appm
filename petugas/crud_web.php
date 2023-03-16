@@ -27,7 +27,7 @@ if ($pg == "login") {
 		//Melakukan Pengecekan Password
 	    if (!password_verify($password, $user['password'])) {
 	        //Mengembalikan ke halaman login jika terjadi password salah
-	        header("Location: login.php?pesan=gagal");
+			header("location: ../index.php?pesan=gagal-login");
 	    } else {
 	    	//Membuat session jika benar
 	        $_SESSION['id_petugas'] = $user['id_petugas'];

@@ -1,3 +1,4 @@
+<!-- TIDAK TERPAKAI -->
 <?php
 session_start();
 

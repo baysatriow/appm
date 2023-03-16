@@ -90,7 +90,6 @@
                               </div>
                               <div class="modal-body">
                                 <?php
-                                  
 
                                   // Menentukan nilai id pengaduan yang ingin dilihat detailnya
                                   $id_pengaduan = $pengaduan['id_pengaduan'];

@@ -23,20 +23,20 @@ if(!isset($_SESSION['id_masyarakat'])){
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
         <meta content="Coderthemes" name="author">
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../migrasi/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
         <!-- third party css -->
-        <link href="../migrasi/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
         <!-- third party css end -->
 
         <!-- App css -->
-        <link href="../migrasi/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-        <link href="../migrasi/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
-        <link href="../migrasi/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
+        <link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
 
         <!-- Datatables css -->
-        <link href="../migrasi/assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
-        <link href="../migrasi/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css" />
 
         <!-- Fontawesome Kits -->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -55,20 +55,20 @@ if(!isset($_SESSION['id_masyarakat'])){
                 <!-- LOGO -->
                 <a href="." class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img src="../migrasi/assets/images/logo-dark.png" alt="" height="50">
+                        <img src="../assets/images/logo-dark.png" alt="" height="50">
                     </span>
                     <span class="logo-sm">
-                        <img src="../migrasi/assets/images/logo_sm.png" alt="" height="50">
+                        <img src="../assets/images/logo_sm.png" alt="" height="50">
                     </span>
                 </a>
 
                 <!-- LOGO -->
                 <a href="." class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="../migrasi/assets/images/logo-dark.png" alt="" height="50">
+                        <img src="../assets/images/logo-dark.png" alt="" height="50">
                     </span>
                     <span class="logo-sm">
-                        <img src="../migrasi/assets/images/logo_sm_dark.png" alt="" height="50">
+                        <img src="../assets/images/logo_sm_dark.png" alt="" height="50">
                     </span>
                 </a>
     
@@ -230,27 +230,27 @@ if(!isset($_SESSION['id_masyarakat'])){
         <!-- /End-bar -->
 
         <!-- bundle -->
-        <script src="../migrasi/assets/js/vendor.min.js"></script>
-        <script src="../migrasi/assets/js/app.min.js"></script>
+        <script src="../assets/js/vendor.min.js"></script>
+        <script src="../assets/js/app.min.js"></script>
 
         <!-- third party js -->
-        <script src="../migrasi/assets/js/vendor/apexcharts.min.js"></script>
-        <script src="../migrasi/assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="../migrasi/assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="../assets/js/vendor/apexcharts.min.js"></script>
+        <script src="../assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="../assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
         <!-- third party js ends -->
 
         <!-- demo app -->
-        <script src="../migrasi/assets/js/pages/demo.dashboard.js"></script>
+        <script src="../assets/js/pages/demo.dashboard.js"></script>
         <!-- end demo js-->
 
         <!-- Datatables js -->
-        <script src="../migrasi/assets/js/vendor/jquery.dataTables.min.js"></script>
-        <script src="../migrasi/assets/js/vendor/dataTables.bootstrap5.js"></script>
-        <script src="../migrasi/assets/js/vendor/dataTables.responsive.min.js"></script>
-        <script src="../migrasi/assets/js/vendor/responsive.bootstrap5.min.js"></script>
+        <script src="../assets/js/vendor/jquery.dataTables.min.js"></script>
+        <script src="../assets/js/vendor/dataTables.bootstrap5.js"></script>
+        <script src="../assets/js/vendor/dataTables.responsive.min.js"></script>
+        <script src="../assets/js/vendor/responsive.bootstrap5.min.js"></script>
 
         <!-- Datatable Init js -->
-        <script src="../migrasi/assets/js/pages/demo.datatable-init.js"></script>
+        <script src="../assets/js/pages/demo.datatable-init.js"></script>
 
         
     </body>

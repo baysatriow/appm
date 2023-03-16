@@ -9,12 +9,12 @@
     if (isset($_GET['pesan'])) {
         $pesan = $_GET['pesan'];
 
-        if ($pesan == "sukses") {
+        if ($pesan == "edit") {
             echo "<script type='text/javascript'>
 
                 iziToast.info({
                 title: 'Selamat!',
-                message: 'Data Berhasil Di Tambahkan',
+                message: 'Data Berhasil Di Ubah',
                 position: 'topRight'
                 });							
                 </script>";
@@ -100,8 +100,7 @@
 					<div class="col-md-6">
 						<div class="mb-3">
 							<label for="" class="form-label">Level</label>
-		                    <input type="text" class="form-control" value="<?= $setting['level'] ?>" disabled>
-							<input type="hidden" name="level" class="form-control" value="<?= $setting['level'] ?>" required>
+							<input type="text" name="level" class="form-control" value="<?= $setting['level'] ?>" readonly>
 							<small class="form-text text-muted">Level Hanya Bisa Di Ubah Oleh Administrator Lewat Console Admin.</small>
 						</div>
 					</div> <!-- end col -->
