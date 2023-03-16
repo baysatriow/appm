@@ -15,7 +15,7 @@ if ($pg == "register") {
 	mysqli_query($koneksi, "INSERT INTO masyarakat VALUES ('','$nik','$nama','$username','$password','$telp')");
     
     // Mengalihkan ke Halaman Login Dan Membuat Alert Sukses
-	header("Location: login.php?pesan=sukses");
+	header("location: ../index.php?pesan=sukses");
 
 }
 
@@ -42,7 +42,7 @@ if ($pg == "login") {
 		//Melakukan Pengecekan Password
 	    if (!password_verify($password, $user['password'])) {
 	        //Mengembalikan ke halaman login jika terjadi password salah
-	        header("Location: login.php?pesan=gagal");
+	        header("location: ../index.php?pesan=gagal-login");
 	        exit;
 	    } else {
 
@@ -53,7 +53,7 @@ if ($pg == "login") {
 	    }
 	} else {
 		//Mengembalikan ke halaman login jika semua kondisi tidak terpenuhi
-	    header("Location: login.php?pesan=gagal");
+	    header("location: ../index.php?pesan=gagal-login");
 	    exit;
 	}
 }

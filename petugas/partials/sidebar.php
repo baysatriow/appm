@@ -35,7 +35,7 @@
             <!-- Khusus Admin!!! -->
             <?php if ($petugas['level'] == "admin") { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="?pg=petugas" target="_blank">
+                    <a class="nav-link" href="?pg=petugas">
                     <i class="fas fa-user"></i>
                     <span>Data Petugas</span></a>
                 </li>
@@ -45,7 +45,7 @@
             </div>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="modul/mod_laporan/laporan.php" target="_blank">
+                    <a class="nav-link" href="modul/mod_laporan/laporan.php">
                     <i class="fas fa-print"></i>
                     <span>Laporan Pengaduan</span></a>
                 </li>

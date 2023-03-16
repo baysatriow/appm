@@ -35,7 +35,7 @@ if ($pg == "login") {
 	    }
 	} else {
 		//Mengembalikan ke halaman login jika semua kondisi tidak terpenuhi
-	    header("Location: login.php?pesan=gagal");
+	    header("location: ../index.php?pesan=gagal-login");
 	}
 }
 

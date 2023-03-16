@@ -3,7 +3,7 @@ session_start();
 
 // cek apakah session login sudah ada
 if(!isset($_SESSION['id_petugas'])){
-  header("location: login.php?pesan=login");
+  header("location: ../index.php?pesan=login-dulu");
   exit();
 }else{
     include '../config/koneksi.php';

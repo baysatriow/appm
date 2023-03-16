@@ -8,6 +8,8 @@ if (isset($_GET['pg'])) {
         include "modul/mod_tanggapan/tanggapan.php";
     } elseif ($pg == 'petugas') {
         include "modul/mod_petugas/petugas.php";
+    }elseif ($pg == 'setting') {
+        include "modul/mod_setting/setting.php";
     }
 }else{
     include "modul/home.php";

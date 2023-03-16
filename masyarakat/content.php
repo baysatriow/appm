@@ -6,6 +6,8 @@ if (isset($_GET['pg'])) {
         include "modul/mod_pengaduan/pengaduan.php";
     } elseif ($pg == 'tanggapan') {
         include "modul/mod_tanggapan/tanggapan.php";
+    } elseif ($pg == 'setting') {
+        include "modul/mod_setting/setting.php";
     }
 }else{
     include "modul/home.php";
